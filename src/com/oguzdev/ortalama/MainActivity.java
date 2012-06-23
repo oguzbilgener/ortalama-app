@@ -1,8 +1,5 @@
 package com.oguzdev.ortalama;
 
-import com.actionbarsherlock.app.*;
-import com.actionbarsherlock.internal.widget.*;
-import com.actionbarsherlock.internal.view.*;
 import android.app.*;
 import android.os.*;
 import android.view.*;
@@ -16,7 +13,7 @@ import java.nio.*;
 import android.util.Log;
 import java.text.*;
 
-public class MainActivity extends SherlockActivity
+public class MainActivity extends Activity
 {
 	/* test */
     private Context context;
@@ -80,7 +77,6 @@ public class MainActivity extends SherlockActivity
 		parent2 = (LinearLayout) findViewById(R.id.parent2);
 		
 		warning = new Warning();
-
     	
     	setupList();    	
     }
@@ -246,18 +242,24 @@ public class MainActivity extends SherlockActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		if (item.getItemId() == R.id.menu_dersler) {
-			Intent i = new Intent(this,Dersler.class);
-			i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(i);
-		} else if (item.getItemId() == R.id.menu_hesapla) {
-			Hesapla();
-		} else if (item.getItemId() == R.id.menu_temizle) {
-			Temizle();
-		} else if (item.getItemId() == R.id.menu_about) {
-			Intent h = new Intent(this,About.class);
-			h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(h);
+		switch(item.getItemId())
+		{
+			case R.id.menu_dersler:	
+				Intent i = new Intent(this,Dersler.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(i);
+			break;
+			case R.id.menu_hesapla:
+				Hesapla();				
+			break;
+			case R.id.menu_temizle:
+				Temizle();
+			break;
+			case R.id.menu_about:
+				Intent h = new Intent(this,About.class);
+				h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(h);
+			break;
 		}
 		return true;
 	}

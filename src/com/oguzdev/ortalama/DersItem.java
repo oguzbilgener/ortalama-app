@@ -70,15 +70,18 @@ public class DersItem extends LinearLayout implements OnClickListener
 	
 	public void onClick(View v)
 	{
-		if (v.getId() == R.id.ders_silbutton) {
-			try
-			{
-				db.deleteDers(name);
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
+		switch(v.getId())
+		{
+			case R.id.ders_silbutton:
+				try
+				{
+					db.deleteDers(name);
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			break;
 		}
 		
 		DersItem child;

@@ -1,8 +1,5 @@
 package com.oguzdev.ortalama;
 
-import com.actionbarsherlock.app.*;
-import com.actionbarsherlock.internal.widget.*;
-import com.actionbarsherlock.internal.view.*;
 import android.app.*;
 import android.os.*;
 import android.view.*;
@@ -12,7 +9,7 @@ import android.view.View.OnTouchListener;
 import android.util.Log;
 import com.oguzdev.ortalama.R;
 
-public class Dersler extends SherlockActivity
+public class Dersler extends Activity
 {
 	private Context context;
 	private SettingsSource db;
@@ -30,7 +27,7 @@ public class Dersler extends SherlockActivity
 		context = getApplicationContext();
 		db = new SettingsSource(this);
 		
-		ActionBar action = getSupportActionBar();
+		ActionBar action = getActionBar();
 		action.setDisplayHomeAsUpEnabled(true);
 		
 		parent = (LinearLayout)findViewById(R.id.parent);
@@ -134,18 +131,24 @@ public class Dersler extends SherlockActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		if (item.getItemId() == R.id.abs__home) {
-			Intent i = new Intent(this,MainActivity.class);
-			i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(i);
-		} else if (item.getItemId() == R.id.sub_menu_dersekle) {
-			bosDersEkle();
-		} else if (item.getItemId() == R.id.menu_about) {
-			Intent h = new Intent(this,About.class);
-			h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(h);
-		} else {
-			return super.onOptionsItemSelected(item);
+		switch(item.getItemId())
+		{
+			case android.R.id.home:
+
+				Intent i = new Intent(this,MainActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(i);
+			break;
+			case R.id.sub_menu_dersekle:
+				bosDersEkle();
+			break;
+			case R.id.menu_about:
+				Intent h = new Intent(this,About.class);
+				h.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(h);
+			break;
+			default: 
+				return super.onOptionsItemSelected(item);
 		}
 		return true;
 	}

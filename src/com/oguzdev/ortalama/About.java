@@ -1,9 +1,5 @@
 package com.oguzdev.ortalama;
 
-import com.actionbarsherlock.app.*;
-import com.actionbarsherlock.internal.widget.*;
-import com.actionbarsherlock.internal.view.*;
-
 import android.app.*;
 import android.os.*;
 import android.widget.*;
@@ -12,7 +8,7 @@ import android.view.*;
 import android.text.util.*;
 import android.text.method.*;
 
-public class About extends SherlockActivity
+public class About extends Activity
 {
 	private Context context;
 	private SettingsSource db;
@@ -26,7 +22,7 @@ public class About extends SherlockActivity
 		context = getApplicationContext();
 		db = new SettingsSource(this);
 
-		ActionBar action = getSupportActionBar();
+		ActionBar action = getActionBar();
 		action.setDisplayHomeAsUpEnabled(true);
 		
 		TextView about_text = (TextView)findViewById(R.id.about_text);
@@ -36,12 +32,16 @@ public class About extends SherlockActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
-		if (item.getItemId() == R.id.abs__home) {
-			Intent i = new Intent(this,MainActivity.class);
-			i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(i);
-		} else {
-			return super.onOptionsItemSelected(item);
+		switch(item.getItemId())
+		{
+			case android.R.id.home:
+
+				Intent i = new Intent(this,MainActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(i);
+				break;
+			default: 
+				return super.onOptionsItemSelected(item);
 		}
 		return true;
 	}
