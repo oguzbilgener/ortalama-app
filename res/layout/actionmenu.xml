@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<item android:id="@+id/menu_hesapla"
+		  android:title="@string/menu_hesapla"
+		  android:showAsAction="always"
+	/>
+	<item android:id="@+id/menu_dersler"
+		android:title="@string/menu_dersler"
+		android:showAsAction="ifRoom|withText"
+		android:icon="@drawable/ic_action_dersler" />
+	<item android:id="@+id/menu_temizle"
+		android:title="@string/menu_temizle"
+		android:showAsAction="ifRoom|withText"
+		android:icon="@drawable/ic_action_temizle" />
+	<item android:id="@+id/menu_other"
+		  android:title="@string/menu_about">
+			<item android:id="@+id/menu_about"
+				android:title="@string/menu_about"
+			/>
+	</item>
+</menu>

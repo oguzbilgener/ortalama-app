@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">naber?</string>
+    <string name="app_name">Ortalama Hesaplayıcı</string>
+    <string name="app_short_name">Ortalama</string>
+    
+	<string name="dersedit">Ders Ekle/Sil</string>
+	<string name="menu_dersler">Dersler</string>
+	<string name="menu_hesapla">Hesapla</string>
+	<string name="menu_temizle">Temizle</string>
+	<string name="menu_about">Hakkında</string>
+	<string name="about">Hakkında</string>
+	<string name="sub_menu_dersekle">Ders Ekle</string>
+		
+	<string name="title_takdir">Tebrikler!</string>
+	<string name="title_tesekkur">Eh...</string>
+	<string name="title_zayif">Kötü...</string>
+		
+	<string name="enter_value">Lütfen en az bir not girin</string>
+		
+	<string name="warning_ders_ekle">Henüz hiç ders yok.</string>
+		
+	<string name="your_result">Ortalamanız:</string>
+		
+	<string name="about_text"><a href="http://oguzbilgener.com">Oğuz Bilgener</a> tarafından, <a href="https://play.google.com/store/apps/details?id=com.aide.ui">AIDE</a> ile Asus Transformer Prime üzerinde geliştirildi. \n Sürüm 0.1	</string>
+</resources>

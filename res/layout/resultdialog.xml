@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/result_parent"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="20dp"
+	android:gravity="center"
+>
+	
+	<TextView
+		android:id="@+id/result_exp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:gravity="center"
+		android:textSize="22dp"
+		android:text="@string/your_result"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="30dip"
+	/>
+
+	<TextView
+		android:id="@+id/result_val"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textSize="26dp"
+		android:text="0"
+	/>
+		
+</LinearLayout>

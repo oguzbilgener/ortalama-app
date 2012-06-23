@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/not_linear_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip"
+    android:orientation="horizontal" >
+	<TextView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/not_ders"
+		android:layout_height="fill_parent"
+		android:layout_width="0dp"
+		android:layout_weight="0.5"
+		android:gravity="center"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:textSize="22dip"
+		
+	/>
+	<EditText
+		android:id="@+id/not_val"
+		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_weight="0.5"
+		android:layout_marginRight="20dp"
+		android:gravity="center"
+	/>
+</LinearLayout>

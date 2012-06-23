@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ders_linear_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip"
+	android:clickable="true"
+    android:orientation="horizontal" >
+	<EditText
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/ders_name"
+		android:layout_height="fill_parent"
+		android:layout_width="0dp"
+		android:layout_weight="0.66"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="40dp"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+		android:textSize="22dip"
+		android:hint="ders adı"
+		android:clickable="true"
+	/>
+	<EditText
+		android:id="@+id/ders_katsayi"
+		android:layout_height="fill_parent"
+		android:layout_width="0dp"
+		android:layout_weight="0.33"
+		android:layout_marginRight="20dp"
+		android:paddingLeft="20dp"
+		android:gravity="center_vertical"
+		android:hint="katsayı"
+		android:clickable="true"
+	/>
+	<Button
+		android:id="@+id/ders_silbutton"
+		android:layout_height="40dp"
+		android:layout_width="40dp"
+		android:layout_marginRight="40dp"
+		android:gravity="center_vertical"
+		android:background="@android:drawable/ic_delete"
+		android:text=""
+	/>
+</LinearLayout>
