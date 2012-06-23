@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 public class OToast extends Toast {
 
-	Toast oguz;
+	Toast t;
 	int duration;
 	public OToast(Context context,CharSequence message) {
 		super(context);
@@ -13,19 +13,19 @@ public class OToast extends Toast {
 
 		duration = Toast.LENGTH_SHORT;
 
-		oguz = Toast.makeText(context, message, duration);
-		oguz.show();
+		t = Toast.makeText(context, message, duration);
+		t.show();
 	}
-	public OToast(Context context,CharSequence message,String how) {
+	public OToast(Context context,CharSequence message,String dur) {
 		super(context);
 		// TODO Auto-generated constructor stub
-		if(how=="long")
+		if(length.equals("long"))
 			duration = Toast.LENGTH_LONG;
 		else 
 			duration = Toast.LENGTH_SHORT;
 
-		oguz = Toast.makeText(context, message, duration);
-		oguz.show();
+		t = Toast.makeText(context, message, duration);
+		t.show();
 	}
 }
 
